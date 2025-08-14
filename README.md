@@ -21,8 +21,8 @@ Este bot de Discord automatiza el envío de notificaciones cuando se detectan nu
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <url-del-repositorio>
-cd autocommit-detection
+git clone https://github.com/luisfer-cli/discord_bot_commit_detection.git
+cd discord_bot_commit_detection
 ```
 
 ### 2. Crear entorno virtual
@@ -61,13 +61,13 @@ BACKEND_CHANNEL_ID=tu_id_del_canal_backend
 FRONTEND_CHANNEL_ID=tu_id_del_canal_frontend
 
 # Repositorios a monitorear
-BACKEND_OWNER=VicthorVF21
-BACKEND_REPO=ClickAppBackNet
-BACKEND_BRANCH=main
+BACKEND_OWNER=dueño_del_repo
+BACKEND_REPO=nombre_del_repo
+BACKEND_BRANCH=rama
 
-FRONTEND_OWNER=VicthorVF21
-FRONTEND_REPO=ClickAppReact
-FRONTEND_BRANCH=main
+FRONTEND_OWNER=dueño_del_repo
+FRONTEND_REPO=nombre_del_repo
+FRONTEND_BRANCH=rama
 
 # Intervalo de verificación (segundos)
 CHECK_INTERVAL=10
@@ -176,4 +176,3 @@ Modifica la variable `CHECK_INTERVAL` en el archivo `.env`.
 ```bash
 chmod +x monitor.sh
 ```
-
