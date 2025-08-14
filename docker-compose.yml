@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  autocommit-bot:
+    build: .
+    container_name: autocommit-discord-bot
+    environment:
+      # Discord configuration
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - BACKEND_CHANNEL_ID=${BACKEND_CHANNEL_ID}
+      - FRONTEND_CHANNEL_ID=${FRONTEND_CHANNEL_ID}
+      
+      # Repository configuration
+      - BACKEND_OWNER=${BACKEND_OWNER}
+      - BACKEND_REPO=${BACKEND_REPO}
+      - BACKEND_BRANCH=${BACKEND_BRANCH}
+      - FRONTEND_OWNER=${FRONTEND_OWNER}
+      - FRONTEND_REPO=${FRONTEND_REPO}
+      - FRONTEND_BRANCH=${FRONTEND_BRANCH}
+      
+      # Other settings
+      - CHECK_INTERVAL=${CHECK_INTERVAL}
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    command: ["./monitor.sh"]

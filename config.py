@@ -42,7 +42,6 @@ class Config:
                 missing_vars.append(var)
 
         if missing_vars:
-            raise ValueError(f"Missing environment variables: {
-                             ', '.join(missing_vars)}")
+            raise ValueError(f"Missing environment variables: {', '.join(missing_vars)}")
 
         return True

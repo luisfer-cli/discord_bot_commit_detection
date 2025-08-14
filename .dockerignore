@@ -1,0 +1,15 @@
+# Ignore Docker files and build context
+.dockerignore
+Dockerfile*
+docker-compose*
+.git
+.gitignore
+README.md
+.env*
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
